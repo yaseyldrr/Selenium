@@ -1,7 +1,7 @@
 package Day14;
 
-import Utlity.BaseDriver;
-import Utlity.MyFunc;
+import Utility.BaseDriver;
+import Utility.MyFunc;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -17,7 +17,7 @@ public class _02_RobotFileUpload extends BaseDriver {
     @Test
     public void Test1() throws AWTException {
         driver.get("https://demo.guru99.com/test/upload/");
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
 
         Robot rbt=new Robot();
 
@@ -28,7 +28,7 @@ public class _02_RobotFileUpload extends BaseDriver {
 
         rbt.keyPress(KeyEvent.VK_ENTER);
         rbt.keyRelease(KeyEvent.VK_ENTER);
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
 
         // stringi hafızaya kopyalama yöntemi
         StringSelection dosyaYolu= new StringSelection("C:\\Users\\TechnoStudy\\Desktop\\test.txt");
@@ -42,27 +42,27 @@ public class _02_RobotFileUpload extends BaseDriver {
         rbt.keyRelease(KeyEvent.VK_V);
         rbt.keyRelease(KeyEvent.VK_CONTROL);
 
-        MyFunc.Bekle(1);
+        MyFunc.bekle(1);
         rbt.keyPress(KeyEvent.VK_ENTER);
         rbt.keyRelease(KeyEvent.VK_ENTER);
 
-        MyFunc.Bekle(1);
+        MyFunc.bekle(1);
         for (int i = 0; i < 2; i++) {
             rbt.keyPress(KeyEvent.VK_TAB);
             rbt.keyRelease(KeyEvent.VK_TAB);
         }  // check box a geldim
 
-        MyFunc.Bekle(1);
+        MyFunc.bekle(1);
         rbt.keyPress(KeyEvent.VK_SPACE); // checkBox ı çekledim
         rbt.keyRelease(KeyEvent.VK_SPACE);
 
-        MyFunc.Bekle(1);
+        MyFunc.bekle(1);
         for (int i = 0; i < 2; i++) {
             rbt.keyPress(KeyEvent.VK_TAB);
             rbt.keyRelease(KeyEvent.VK_TAB);
         }  // Submit butonuna geldim
 
-        MyFunc.Bekle(1);
+        MyFunc.bekle(1);
         rbt.keyPress(KeyEvent.VK_ENTER);
         rbt.keyRelease(KeyEvent.VK_ENTER);  // Submit butonuna bastım
 
@@ -71,7 +71,7 @@ public class _02_RobotFileUpload extends BaseDriver {
 
         Assert.assertTrue(msg.isDisplayed()); // assert
 
-        MyFunc.Bekle(5);
+        MyFunc.bekle(5);
         BekleKapat();
     }
 

@@ -8,8 +8,8 @@ package Day14;
  */
 
 
-import Utlity.BaseDriver;
-import Utlity.MyFunc;
+import Utility.BaseDriver;
+import Utility.MyFunc;
 import org.junit.Test;
 
 import java.awt.*;
@@ -22,7 +22,7 @@ public class _01_RobotIntro extends BaseDriver {
     @Test
     public void Test1() throws AWTException {
         driver.get("https://www.selenium.dev/");
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
 
         Robot robot=new Robot();
 
@@ -34,7 +34,7 @@ public class _01_RobotIntro extends BaseDriver {
         robot.keyPress(KeyEvent.VK_T); // ctrl basılı idi, T harfine bastım
         robot.keyRelease(KeyEvent.VK_T); // T tuşunu bırak
         robot.keyRelease(KeyEvent.VK_CONTROL);  // CTRL tuşunu bırak
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
 
         System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl()); // şu an hala 1.sayfadayım
 
@@ -44,7 +44,7 @@ public class _01_RobotIntro extends BaseDriver {
         String ikinciPencereID= gosterge.next().toString();
 
         driver.switchTo().window(ikinciPencereID); //2.Pencereye yani taba geçctim.
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
         System.out.println("driver.getTitle() = " + driver.getTitle());
         driver.get("https://www.facebook.com/");
 

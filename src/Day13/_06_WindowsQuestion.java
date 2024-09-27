@@ -7,8 +7,8 @@ package Day13;
     Daha sonra Anasayfa harici diğer tüm sayfaları kapatınız.
  */
 
-import Utlity.BaseDriver;
-import Utlity.MyFunc;
+import Utility.BaseDriver;
+import Utility.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,7 +21,7 @@ public class _06_WindowsQuestion extends BaseDriver {
     @Test
     public void Test1(){
         driver.get("https://www.selenium.dev/");
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
 
         String anaSafyaId=driver.getWindowHandle();
 
@@ -34,7 +34,7 @@ public class _06_WindowsQuestion extends BaseDriver {
             js.executeScript("arguments[0].click();", e);
             System.out.println("e.getAttribute = " + e.getAttribute("href"));
         }
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
 
         Set<String> tabIdler=driver.getWindowHandles();
         for(String id: tabIdler){
@@ -50,7 +50,7 @@ public class _06_WindowsQuestion extends BaseDriver {
             driver.close(); //sadece bulunduğu tab ı kapatır
         }
 
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
         BekleKapat();
     }
 

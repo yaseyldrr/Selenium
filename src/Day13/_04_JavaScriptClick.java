@@ -1,7 +1,7 @@
 package Day13;
 
-import Utlity.BaseDriver;
-import Utlity.MyFunc;
+import Utility.BaseDriver;
+import Utility.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,7 +12,7 @@ public class _04_JavaScriptClick extends BaseDriver {
     @Test
     public void Test1() {
         driver.get("https://www.copado.com/robotic-testing");
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
 
         JavascriptExecutor js=(JavascriptExecutor)driver;
 

@@ -1,7 +1,7 @@
 package Day13;
 
-import Utlity.BaseDriver;
-import Utlity.MyFunc;
+import Utility.BaseDriver;
+import Utility.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -28,11 +28,11 @@ public class _05_WindowsIntro extends BaseDriver {
         for (String id: windowsIdLer)
             System.out.println("id = " + id);
 
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
         //Ana sayfanın olduğu TAB a geç
         driver.switchTo().window(anaSafyaId);
 
-        MyFunc.Bekle(5);
+        MyFunc.bekle(5);
         BekleKapat();
     }
 

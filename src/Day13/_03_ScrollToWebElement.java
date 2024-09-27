@@ -1,7 +1,7 @@
 package Day13;
 
-import Utlity.BaseDriver;
-import Utlity.MyFunc;
+import Utility.BaseDriver;
+import Utility.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,7 +13,7 @@ public class _03_ScrollToWebElement extends BaseDriver {
     public void Test1()
     {
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
-        MyFunc.Bekle(2);
+        MyFunc.bekle(2);
 
         JavascriptExecutor js=(JavascriptExecutor)driver;
 
