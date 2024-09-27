@@ -1,6 +1,6 @@
 package Day14;
 
-import Utlity.BaseDriver;
+import Utility.BaseDriver;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.openqa.selenium.By;
