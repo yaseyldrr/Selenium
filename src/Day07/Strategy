@@ -1,0 +1,86 @@
+Locator Bulma Stratejisi
+1- id si var , 2-name var önce onları kullan
+  yok ise
+3- özel class ı var ise onu kullan
+  yok ise
+4,5- a tag i ise LinkText veya PartialLinkText kullan
+  değilse
+6-tüm belli tag deki elemanlar lazım ise TAG ile
+  bulmayı kullan
+
+Eğer elemanın yukarıdaki attribute ları yok ise
+1-Css Selector git : en hızlı ve tarayıcı uyumlu
+
+Eğer geri gitmen gerekiyor ise,
+Eğer Textinden bulman gerekiyor ise,
+Eğer tüm sayfada n. eleman olarak bulman gerekiyor ise
+XPATH e git.
+
+Elemanın kendisine direkt ulaşamıyorsan, en yakın sağlam
+locator lı elemanı bul , ondan elemana ilerle.
+*********************************************
+İnterview larda soruyorlar
+Locator bulma Stratejin nedir ?
+1- id
+2- name
+3- class
+4- LinkText(a)
+5- PartialLinkText(a)
+6- Tag ile bulurum
+7- Css Selector
+8- Xpath
+
+Şirketler ne yapıyor pratikte ?
+Benim prgramlarım düzenli olsun diyor
+madem bir şekilde hep XPath lazım oluyor,
+hepsi XPATH olsun diyor.
+By.id("first8");
+By.Xpath("//input[@id='first8']");
+**********************************
+```Interviewlarda kaç çeşit xPath vardır diyer sorabilirler
+
+1- Absoulte xPath (Kullanılan bir yöntem değil)
+     /html/body/div/div/div/div/a/img
+   1- / başlıyor
+   2- En baştan html tag ile başlıyor ,tek tek gidiyor, araya bir eleman girse bozulur
+
+2- Relative xPath
+   //div[@id="msg"]   //*[@id="msg"]
+   //input[@id='first8']  @ Attribute lar için
+   1- // başlıyor
+   2- Elemanı direkt bulur, diğeri kadar aradaki elemanlara bağımlı değildir.
+
+Xpath in avantajları :
+1- Herhangi bir elemanı görünen text inden bulabilir.   //label[text()='First Name']
+2- HTML içinde geri geri (parente) gidebilir.  /..      //label[text()='First Name']/../..
+3- xpath ile bulunmuş eleman sayfada çok ise, 1.cisi,   (//label[@class='form-sub-label'])[2]
+  2.cisi veya 3. cüsü gibi sırasını vererek alabiliriz.
+
+
+CSS                            XPATH
+[id='msg']                    //input[@id='msg']    , input bölümü şart istenirse * konabilir.
+[id='msg'][value='Good']      //input[@id='msg' and @value='Good']
+
+
+ile başlayan id^              //input[ starts-with(@id,'u_') ]  id si u_ ile başlayan demek
+ile biten    id$              //input[ ends-with(@id,'_455') ]  id si _455 ile biten demek
+içinde       id*              //input[ contains(@id,'u_') ]     id sinde u_ geçen demek
+
+
+>       -> cocuklar                /
+space   -> tüm çocuklar            //
++       -> bitişik kardeş          /following-sibling::
+~       -> tüm kardeşler           //following::
+
+
+[id='list']>:nth-child(3)          //ul[@id='list']/li[3]   id si List olanın çocuklarından 3.sü
+
+
+XPath in CSS den üstünlükleri
+1- Görünen yazısından eleman bulma->      //*[text()='Siparişler']   görünen yazısı bu olan
+                                          //*[ contains( text(), 'Sipa' )  ]  görünen yazsısında geçen
+
+2- Geri Geri gitme ->                     /..         -> parenti bulur
+3- Çoklu elemanlardan seçme               (//*[@id='user-message'])[2]
+
+```

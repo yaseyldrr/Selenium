@@ -1,0 +1,13 @@
+Şu ana kadar
+Click , yazı gönderebildik
+ama
+sağ click, double click, hoverover, dragdrop, yön tuşları, özel tuşlar
+bunları yapamadık
+
+Interview Sorular
+1- Action Sınıfı nedir?
+sağ click, double click, hoverover, dragdrop, yön tuşları, özel tuşlar bunları nasıl yaparsın ?
+Action Sınıfıyla yaparım.
+
+2- Nasıl kullanırsın ?
+   Actions aksiyonlar=new Actions(driver); // driver üzerinden aksiyonlar yapıcam.

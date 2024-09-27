@@ -1,0 +1,29 @@
+1920 x 1200   yatyda 1920 kut, dikeyde 1200 kutu var, kut=pixel
+1000 inin üzerine çıktığında High Defination : HD görüntü kalitesi
+
+Her pixel bağımsız bir renk,
+Her pixel de 3 ana renk vardır
+
+RGB :   RRGGBB -> 00 00 00  : R:0  G:0  B:0  : Beyaz
+               -> FF FF FF  : R:255  G:255  B:255
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+A  -> 10
+B  -> 11
+C  -> 12
+D  -> 13
+E  -> 14
+F  -> 15
+
+16 lık sistem
+
+Sarı : FFFF00 -> Tam kırmızı ve tam yeşil karışımı

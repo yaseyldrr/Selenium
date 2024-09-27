@@ -1,0 +1,64 @@
+7-CssSelector
+
+input[id='first8'][class='clfirst8']
+
+çocuk >  ilgili elemanın hemen 1 seviye
+         altındaki elemanlar
+
+tum çocuklar (içindeki tüm elemanlar)
+Space
+
+<div>
+  <p>merhaba 1</p>
+  <p>Merhaba 2</p>
+
+  <div>
+    <img src="logo.png">
+  </div>
+</div>
+
++  bitişik kardeşi bulur
+~  tüm kardeşlerde ara
+
+^ : bunula başlayan
+$ : bununla biten
+: içinde geçen
+
+<ul id="liste">
+ <li>
+ <li>
+ <li>
+</ul>
+
+[id='liste'] > :nth-child(3)
+[id='liste'] > li
+
+
+7-Css Selector
+yapamadıklarımız
+1-geri gitme yok
+
+2-sadece a larda linkText,partialLinkText
+diğer elemanlarda yazısında yakala yok
+
+3-tüm sayada bu şekilde 4 tane eleman
+  çıktı, tüm sayfadaki 2.cisi
+
+8-XPath
+  1- ileri geri gitme var
+  2- Her elemanı görüne yazısından bulabilirsin
+  3- Tüm sayafa .nci eleman olarak bulabilirsin
+
+  CSSSelector      [id='first_8']
+  XPath     //input[@id='first_8']
+
+  tüm sayfayı tarıyor,tüm sayfayı analiz
+  ederek buluyor, o yzden CSS e göre
+  biraz yavaş
+
+  çocuklar nasıl deniyor
+  tüm çocuklar nasıl deniyor
+  bitiş kardeş
+  tüm kardeşler
+
+  3.Çocuk nasıl deniyor

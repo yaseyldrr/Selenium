@@ -1,0 +1,37 @@
+1-Element HTML (DOM: Document Object Model) de olması
+2-HTML de var ama görünür değil
+3-HTML de var, görünür ama tıklatılabilir değil
+
+Thread.Sleep(MyFunc.Bekle) -> Java programını verilen süre kadar bekletir.
+Web sayfası için uygun değil.
+
+Bir butona tıklatmak için
+  * Butona kadar scroll yap
+  * Tıklatılabilir olana kadar bekle
+  * Tıklat
+
+ButonaTıklat(locator) {
+
+}
+
+Selenium'un bekletme komutları neler?
+
+1-pageLoadTimeOut(Web sayfasına özel)
+  Bir kere yazılır sayfanın yüklenmesi için verilen süredir.
+  Bu süreden yüklenmezse hata verir. Bunu kullanmazsan sonsuza kadar bekler.
+
+  driver.manage().timeouts().pageLoadTimeout(DuratiON.ofSeconds(20));
+  20 sn mühlet, 3 sn de yüklendiyse 17 sn ekstra beklemez.
+
+2-implicitlyWait (Genel tüm elemanlar için kullanılır)
+  Bir kere yazılır. Bütün elemanlar için findElement/s komutu için elementin
+  bulunması için verilen mühlet. Bu sürede bulunmazsa element bulunamamış olur
+  ve element findElement hata verir, findElements için boş döndürür.
+
+  driver.manage().timeouts.implicitlyWait(Duration.ofSeconds(20));
+
+3-explicitWait (WebElement e özel)
+   Element verilen kritere uygun hale gelene kadar bekle, sadece ilgili
+   element için çalışır. Sadece o anda çalışır.
+   İlgili eleman "görünür" olana kadar bekle.
+   İlgili eleman "tıklanabilir" olana kadar bekle.
