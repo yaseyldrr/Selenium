@@ -6,13 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class _01_OpeningWebsite {
     public static void main(String[] args) {
 
-        WebDriver driver=new ChromeDriver(); // tarayıcı driver oluşturuldu
-                         // new FireFoxDriver()
-                         // new EdgeDriver()
+        WebDriver driver=new ChromeDriver();
 
-        driver.get("https://techno.study/tr");  // web sayfasını aç
+        driver.get("https://techno.study/tr");
 
-        // 3 sn bekle
+        // 3 sn
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
