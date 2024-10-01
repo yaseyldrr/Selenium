@@ -1,6 +1,7 @@
 package Day14;
 
 import Utility.BaseDriver;
+import jdk.javadoc.internal.doclets.toolkit.util.DocFile;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -37,10 +38,9 @@ public class _03_ScreenCast extends BaseDriver {
 
             TakesScreenshot ts = (TakesScreenshot) driver;
             File hafizadakiFile = ts.getScreenshotAs(OutputType.FILE);  // ekran kaydını Dosya formatı olarak hafızaya alınmış oldu
-            FileUtils.copyFile(hafizadakiFile, new File("ekranGoruntuleri\\screenShot.jpg")); //2024_04_05_13_56
-            //Şu anda hafızadaki görüntüyü dosya olarak kaydetti.
+            FileUtils.copyFile(hafizadakiFile, new File("C:\\Users\\Yasemin Monster\\OneDrive\\Resimler\\screenShot.jpg")); //2024_04_05_13_56
 
-            // TODO :  Öyle bir şey yapınki her ekran kaydı , AYRI AYRI kaydedilsin.
+            //Şu anda hafızadaki görüntüyü dosya olarak kaydetti.
         }
 
 
